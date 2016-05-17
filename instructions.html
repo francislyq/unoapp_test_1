@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UNOapp Dev. Test - 'V2' - Instructions</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=11">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="You teach me and I'll teach you!">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="./css/styles.css">
+	<link rel="stylesheet" href="./css/instructions.css">
+</head>
+<body>
+	<section id="stage_outer">
+		<div id="stage_inner">
+			<div class="mc">
+				<div class="mc-body section-inner">
+					<div class="mc-node cf">
+						<div class="header">
+							<h2 class="title title-node">Introduction and Instructions</h2>
+						</div>
+						<div class="body cf">
+							<ul class="instructions-list">
+								<li>Update the HTML, CSS, and JS to bring the provided version as close to the reference images as possible</li>
+								<li>See the instructions below for guidance and specific details</li>
+								<li>Do your best, and don't get discouraged</li>
+								<li>Note that the data file included with this test <strong>does not</strong> contain any errors (eg. you will not be required to manipulate it directly)</li>
+								<li>This test is focused on assessing your ability to read in, parse, filter, and output data</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="mc-node cf">
+						<div class="header">
+							<h2 class="title title-node">JS</h2>
+						</div>
+						<div class="body cf">
+							<ul class="instructions-list">
+								<li>Store any DOM/HTML elements which you will be interacting with inside JS variables. All DOM maniuplations should be done via variable</li>
+								<li>Pull in the provided data using an AJAX call</li>
+								<li>Cache repsonse data for later use/reference</li>
+								<li>After the AJAX call completes, iterate over the response data to compile some general statistics, including:</li>
+								<ul>
+									<li>Total number of terms</li>
+									<li>Total number of each type of term</li>
+								</ul>
+								<li>Store the general statistics in whatever format/structure you like (so long as you can access them from elsewhere in your application)</li>
+								<li>Also in the AJAX response, create a new array to store a list of the term types</li>
+								<ul>
+									<li>This array will be used for argument validation in a filtering function (see below)</li>
+									<li>The contents of the array should contain no duplicate values (eg. if array contains both 'JavaScript' &amp; 'javascript', it will be considered incorrect)</li>
+								</ul>
+								<li>Write a function to iterate over the cached JSON data and output only items that meet the passed in 'filter' parameter</li>
+								<ul>
+									<li>The function should accept 1x parameter/argument</li>
+									<li>The function should validate the argument against the pre-populated array of 'types'</li>
+									<li>For each array item that matches the received argument, the function should construct an HTML element and append it to the target 'wrapping' element on the page</li>
+									<li>This function should fire when one of the nav. elements at the top of the page is clicked</li>
+								</ul>
+								<li>The Constructed HTML element should have two states: default; 'active'</li>
+								<ul>
+									<li>Use the element provided in 'index.html' as a reference to create the structure for the items to be contructed inside your function</li>
+									<li>When clicked, the target element should either become 'active', or revert to its default state</li>
+									<li>When 'active', the target element should expand to display the text stored in the 'main' property of the corresponding JSON object</li>
+								</ul>
+							</ul>
+						</div>
+					</div>
+					<div class="mc-node cf">
+						<div class="header">
+							<h2 class="title title-node">CSS</h2>
+						</div>
+						<div class="body cf">
+							<ul class="instructions-list">
+								<li>All of the base/mobile styles will be provided for you</li>
+								<li>Using a media query, build out any additional styles required to match the screenshots provided (only 1x media query should be necessary)</li>
+							</ul>
+						</div>
+					</div>
+					<div class="mc-node cf">
+						<div class="header">
+							<h2 class="title title-node">HTML</h2>
+						</div>
+						<div class="body cf">
+							<ul class="instructions-list">
+								<li>You will not be required to build any new HTML elements inside in the 'index.html' file</li>
+								<li>New HTML elements (such as those created when filtering through the provided data) should be added to the document via Javascript</li>
+								<li>If your solution requires it, you may attach 'data' attributes or Javascript functions directly to the HMTL elements included in the 'index.html' file</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
